@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- my custom CSS goes here -->
-
+    <link rel="stylesheet" href="css/styles.css"/>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -37,9 +37,36 @@
         <div class="col myLeftCol">
           1 of 2
         </div>
-        <div class="col-6">
-          <h1>Center, wider column.</h1>
-          <p>My form will go here.</p>
+        <div class="col-6" id="formArea">
+          <h1>New Visit</h1>
+          <form>
+            <div class="form-group">
+              <label for="ptName">Example select</label>
+              <select class="form-control" id="ptName">
+                <option value="1">Dayton, Keith</option>
+                <option value="2">Prabhakar, Bipin</option>
+                <option value="3">Gregory, Tom</option>
+                <option value="4">Glaub, Adam</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="vistDate">Visit Date</label>
+              <input type="text" class="form-control" id="visitDate" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="visitPriority">Visit Priority</label>
+              <select class="form-control" id="visitPriority">
+                <option value="30">Critical</option> <!--give yourself some space with ids incase you need space later on in the system-->
+                <option value="20">Urgent</option>
+                <option value="10">Non-Emergency</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="visitSymptoms">Symptoms</label>
+              <textarea class="form-control" id="visitSymptoms" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
         <div class="col">
           3 of 3
